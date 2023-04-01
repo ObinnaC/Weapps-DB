@@ -1,0 +1,207 @@
+<!--- Obi Chukwuemeka Homework 2 last date modified: 2/17/2022  --->
+*{
+	
+	box-sizing:border-box;
+	
+}
+body{
+	background:white;
+	margin:0;
+	
+}
+
+nav a:hover{
+	background:skyblue;
+	color:black;
+}
+	
+.legendtitle{
+	width:515px;
+	background-color:rgbrgb(111, 129, 35);
+	margin:35px;
+	color:green;
+	padding:10px 0px 10px 0px;
+	text-align:center;
+	border-radius: 15px;
+	margin: auto;
+	width: 50%;
+	border: 3px solid green;
+	padding: 10px;
+}
+form{
+	padding:10px;
+}
+#name{
+	width:100%;
+	height:100px;
+	
+}
+#name1{
+	width:100%;
+	height:100px;
+	
+}
+.name{
+	margin-left:25px;
+	margin-top:30px;
+	width:125px;
+	color:black;
+	font-size:18px
+	font-weight:700;
+}
+.firstname{
+	position:relative;
+	left:135px;
+	top:-50px;
+	line-height:40px;
+	border-radius:6px;
+	padding:0 22px;
+	font-size:16px;
+}
+.age{
+	position:relative;
+	left:135px;
+	top:-50px;
+	line-height:40px;
+	border-radius:6px;
+	padding:0 22px;
+	font-size:16px;
+}
+.lastname{
+	position:relative;
+	left:90px;
+	top:-50px;
+	line-height:40px;
+	border-radius:6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color:#555;
+}
+.lastlabel{
+	position:relative;
+	color:black;
+	text-transform:capitalize;
+	font-size:14px;
+	left:-155px;
+	top:-15px;
+	
+}	
+.firstlabel{
+	position:relative;
+	color:black;
+	text-transform:capitalize;
+	font-size:14px;
+	left:-110px;
+	top:-15px;
+}
+
+.main{
+	background-color:rbg(0,0,0,0.5);
+	width:45%;
+	float:left;
+
+}	
+	
+.container{
+	background-color:rbg(0,0,0,0.5);
+	width:40%;
+	float:right;
+	margin-top:10px;
+	max-width:1200px;
+	overflow:auto;
+}
+.gallery{
+	margin:5px;
+	border:1px solid #ccc;
+	float:left;
+	width:390px;
+}
+.gallery img{
+	width:100%;
+	height:50%;
+}
+.desc{
+	padding:15px;
+	text-align:center;
+}
+.footer{
+    position:fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	width:100%; 
+	padding:10px
+	foot-size:17px;
+	font-weight:bold;
+	text-align:center;
+	background:green;
+	color:white;
+	font-family:arial;
+	letter-spacing:1px;
+}
+.address{
+	position:relative;
+	left:135px;
+	top:-37px;
+	line-height:40px;
+	width:532px;
+	border-radius:6px;
+	padding:0 22px;
+	font-size:16px;
+	color:#555;
+}
+
+.email{
+	position:relative;
+	left:135px;
+	top:-37px;
+	line-height:40px;
+	width:532px;
+	border-radius:6px;
+	padding:0 22px;
+	font-size:16px;
+	color:#555;
+}
+
+.code{
+	position:relative;
+	left:135px;
+	top:-37px;
+	line-height:40px;
+	width:95px;
+	border-radius:6px;
+	padding:0 22px;
+	font-size:16px;
+	color:#555;
+}
+
+.number{
+	position:relative;
+	left:135px;
+	top:-37px;
+	line-height:40px;
+	width:230px;
+	border-radius:6px;
+	padding:0 22px;
+	font-size:16px;
+	color:#555;
+}
+
+.area-code{
+	position:relative;
+	color:black;
+	text-transform:capitalize;
+	font-size:16px;
+	left:35px;
+	top:-2px;
+}
+.phone-number{
+	position:relative;
+	color:Black;
+	text-transform:capitalize;
+	font-size:14px;
+	left:-105px;
+	top:-2px
+}
+
+

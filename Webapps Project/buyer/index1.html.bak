@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta charset="UTF-8">
+   <head>
+   <title>Humboldt Property Sharks</title>
+   <link rel="stylesheet" type= "text/css" href= "../style.css">
+   <style>
+      body {
+         font-family: Arial;
+      }
+
+      header {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      header h1 {
+         margin: 6px;
+		 text-shadow: 3px 3px 2px grey;
+      }
+
+      nav ul {
+         display: flex;
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+         width: 500px;
+      }
+
+      nav li {
+         background-color: gold;
+         margin: 10px;
+         padding: 10px;
+         text-align: center;
+      }
+
+      nav a {
+         color: black;
+         text-decoration: none;
+      }
+   </style>
+   </head>
+   <body>
+		<center>
+      <img src="../lukasz.jpg" alt="colorful banner" width="750" height="349">
+	  </center>
+	  
+    <header>
+      <h1>Humboldt Property Sharks</h1>
+      <nav>
+         <ul>
+            <li><a href="../index.html">Seller</a></li>
+            <li><a href="index1.html">Buyer</a></li>
+         </ul>
+      </nav>
+   </header>
+	
+	<div class="legendtitle"><h1>Explore rentals on Humboldt Property Sharks</h1></div> 
+	<div class="main">
+		<form action = "index.html" name = "information">
+		<fieldset style = "width:800px; padding:20px">
+			<legend class = "name">Contact</legend>
+				<p  style="font-size:25px;"><b>Drop A Line </b></p>
+				<br><br>
+				<h4>We'd love to hear from you </h4>
+				<br>
+				<div id="name">
+				<h2 class="name"> Name</h2>
+   
+					<input class="firstname" type="text" name="first_name" placeholder="Bob"<br>
+					<label class="firstlabel"> first name</label>
+					<input class="lastname" type="text" name="last_name" placeholder="Smith">
+					<label class="lastlabel">last name</label>
+					
+					
+				</div>
+				
+				<div id="name1">
+				<h2 class="name"> Age</h2>
+   
+					<input class="age" type="number" name="quantity" min="18" max="85"<br>
+				</div>	
+			
+				<h2 class="name"> Address</h2>
+					<input class ="address" types="text" name ="address">
+				<h2 class ="name"> Email</h2>
+					<input class="email" type="text" name = "email" placeholder="someone@example.com">
+				<h2 class ="name"> Phone</h2>
+					<input class="code" type="text" name="area_code" placeholder="123">
+						<label class ="area-code">Area Code</label>
+						<input class="number" type="text" name="phone" placeholder="456-7890">
+						<label class="phone-number">Phone Number</label>
+	
+		</fieldset>
+		<fieldset style = "width:800px; padding:20px">
+			<legend class = "name">Sale</legend>
+				<span class = "name">City</span>	
+						<!-- drop down : they can fill in the rest, show about 3-->
+						<select name="humboldt">
+							<option value="eureka">Eureka</option>
+							<option value="arcata">Arcata</option>
+							<option value="fortuna">Fortuna</option>
+							<option value="mckinleyville">Mckinleyville</option>
+							<option value="trinidad">Trinidad</option>
+							<option value="ferndale">Ferndale</option>
+							<option value="garberville">Garberville</option>
+							<option value="rio dell">Rio Dell</option>
+							<option value="willow creek">Willow Creek</option>
+							<option value="alderpoint">Alderpoint</option>
+							<option value="samoa">Samoa</option>
+						</select>
+					<label class = "name">Sold</label>
+						<!-- drop down : they can fill in the rest, show about 3-->
+						<select name="Houses">
+							<option value="sale">For Sale</option>
+							<option value="rent">For Rent</option>
+							<option value="sold">Sold</option>	
+						</select>
+					<span class = "name">Price Range:</span>	
+						<!-- drop down : they can fill in the rest, show about 3-->
+						<select name="minprice">
+							<option value="No Min">No Min</option>
+							<option value="10">$10K</option>
+							<option value="20">$20k</option>
+							<option value="30">$30k</option>
+							<option value="50">$50k</option>
+							<option value="100">$100k</option>
+							<option value="130">$130k</option>
+							<option value="150">$150k</option>
+							<option value="200">$200k</option>
+							<option value="250">$250k</option>
+							<option value="300">$300k</option>
+							<option value="350">$350k</option>
+							<option value="400">$400k</option>
+							<option value="450">$450k</option>
+							<option value="500">$500k</option>
+							<option value="600">$600k</option>
+							<option value="650">$650k</option>
+							<option value="700">$700k</option>
+							<option value="750">$750k</option>
+						</select>
+					<span>&hyphen;</span>
+						<!-- drop down : they can fill in the rest, show about 3-->
+							<select name="maxprice">
+								<option value="No Max">No Max</option>
+								<option value="10">$10K</option>
+								<option value="20">$20k</option>
+								<option value="30">$30k</option>
+								<option value="50">$50k</option>
+								<option value="100">$100k</option>
+								<option value="130">$130k</option>
+								<option value="150">$150k</option>
+								<option value="200">$200k</option>
+								<option value="250">$250k</option>
+								<option value="300">$300k</option>
+								<option value="350">$350k</option>
+								<option value="400">$400k</option>
+								<option value="450">$450k</option>
+								<option value="500">$500k</option>
+								<option value="600">$600k</option>
+								<option value="650">$650k</option>
+								<option value="700">$700k</option>
+								<option value="750">$750k</option>
+							</select>
+		</fieldset>
+			<br>
+		<fieldset style = "width:620px; padding:20px">
+			<legend class = "name">Home</legend>
+			
+						<label for="fname">Square Feet</label>
+						<br>
+						<input type="text" id="sq" placeholder="No Min"
+					           required minlength="4" maxlength="8" size="10">
+						<span>&hyphen;</span>
+						<input type="text" id="sq1" placeholder="No Max"
+					           required minlength="4" maxlength="8" size="10"><br>
+				<h5>All Home Types</h5>
+					<input name="House" type="checkbox" value="1"/>House
+					<input name="Condo" type="checkbox" value="1"/>Condo
+					<input name="Townhome" type="checkbox" value="1"/>Townhome
+					<input name="Multi-Family" type="checkbox" value="1"/>Multi-Family
+					<input name="Land" type="checkbox" value="1"/>Land
+					<input name="Mobile/Manufactured" type="checkbox" value="1"/>Mobile/Manufactured
+					<input name="Other" type="checkbox" value="1"/>Other
+		</fieldset>			
+		<fieldset style = "width:450px; padding:20px">
+			<legend class = "name">Space and accessories</legend>
+				<h5>Bedrooms</h5>
+					<input name="Studio" type="checkbox" value="1"/>studio
+					<input name="any" type="checkbox" value="1"/>any
+					<input name="1+" type="checkbox" value="1"/>1+
+					<input name="2+" type="checkbox" value="1"/>2+
+					<input name="3+" type="checkbox" value="1"/>3+
+					<input name="4+" type="checkbox" value="1"/>4+
+					<input name="5+" type="checkbox" value="1"/>5+
+					
+				<h5>Bathrooms</h5>
+					<input name="any" type="checkbox" value="1"/>any
+					<input name="1+" type="checkbox" value="1"/>1+
+					<input name="1.5+" type="checkbox" value="1"/>1.5+
+					<input name="3+" type="checkbox" value="1"/>3+
+					<input name="4+" type="checkbox" value="1"/>4+
+					<input name="5+" type="checkbox" value="1"/>5+
+		<h5>Amenties</h5>
+		 <input type="checkbox" id="unit washer" name="unit washer" value="A">
+		 <label for="unit washer"> Unit Washer/Dryer</label><br>
+		 <input type="checkbox" id="Aircond" name="Aircond" value="B">
+		 <label for="Aircond"> Air Conditioning</label><br>
+		 <input type="checkbox" id="Dishwasher" name="Dishwasher" value="C">
+		 <label for="Dishwasher"> Dishwasher</label><br>
+		 <input type="checkbox" id="Garage" name="Garage" value="D">
+		 <label for="Garage"> Garage</label><br><br>
+		 
+		<fieldset style = "width:350px; padding:20px">
+			<legend class = "name" >Pets</legend>
+					<input name="Dogs" type="checkbox" value="1"/>Dogs Allowed
+					<input name="Cats" type="checkbox" value="1"/>Cats Allowed
+		
+		<p id="myDIV">
+						<input type="submit" value="Submit" id="sub">
+						<label  for="Submit"> <br>
+						
+						
+					</p>
+		</fieldset>
+		</fieldset>
+		</div>
+	     
+		<div class ="container">
+			<div class="gallery">
+				<img src="../photoa.jpg">
+					<div class ="desc"> <b> $500,981<b>-</b>$556,425</b>
+					<br>
+					 2-3bd <b>-</b> 2ba
+					 <br>
+					1,109 sqft(House)
+					<br>
+					Lenox Place, (Pet allowed)
+					<br>
+					Arcata,CA 95518</div>
+			</div>
+			<div class="gallery">
+				<img src="../photob.jpg">
+					<div class ="desc"> <b> $133,981 <b>-</b> $150,000 </b>
+					<br>
+					 Studio-1bd <b>-</b> 1ba
+					<br>
+					1,156 sqft(House)
+					<br>
+					Rio At Lenox,
+					<br>
+					Eureka,CA 95503</div>
+			</div>
+			<div class="gallery">
+				<img src="../photoc.jpg">
+					<div class ="desc"> <b> $398,057 </b>
+					<br>
+					 Studio-3bd <b>-</b> 1-2ba
+					<br>
+					750 sqft(Townhome)
+					<br>
+					Gables Brookhaven,
+					<br>
+					Mckinleyville,CA 95521</div>
+			</div>
+			<div class="gallery">
+				<img src="../photoe.jpg">
+					<div class ="desc"> <b>$592,223</b>
+					<br>
+					 Studio-5bd<b>-</b> 1-2ba
+					<br>
+					1,960 sqft(Multi-Family)
+					<br>
+					Gables Brookhaven,
+					<br>
+					Trinidad,CA 95570</div>
+					<br>
+			</div>
+			
+			<br><br><br><br><br><br><br><br>
+		</div>
+		
+		
+		<footer class="footer"> 
+				Copyright © 2022 Humboldt Property Sharks, LLC. All rights reserved
+				<a href="https://www.hud.gov/program_offices/fair_housing_equal_opp" target="_blank">
+				Equal Housing Opportunity.</a> Have a Question? Email our 
+                <a href="mailto:oc47@humboldt.edu" target="_blank">Help Center </a> to find the answer.
+		</footer>
+		
+	   </body>
+	</html>

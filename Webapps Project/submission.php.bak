@@ -1,0 +1,135 @@
+<?php
+if(isset($_POST["submit"]))
+{
+	header('Location:submission.php');
+}
+
+
+
+
+?>
+
+<?php
+
+
+$first_name1 = strip_tags($_POST['first_name']);
+$last_name1= strip_tags($_POST['last_name']);
+$address1 = strip_tags($_POST['address']);
+$email1 = strip_tags($_POST['email']);
+
+
+$area_code1 = strip_tags($_POST['area_code']);
+$phone1 = strip_tags($_POST['phone']);
+
+$humboldt1 =$_POST['humboldt'];
+$Houses1 =$_POST['Houses'];
+$minprice1 =$_POST['minprice'];
+
+
+$studio1 =isset($_POST['House']) ? 1 : 0;
+$Condo1 =isset($_POST['Condo']) ? 1 : 0;
+$TownhomeTownhome1 =isset($_POST['Townhome']) ? 1 : 0;
+$Multi_Family1 =isset($_POST['Multi_Family']) ? 1 : 0;
+$Land1 =isset($_POST['Land']) ? 1 : 0;
+$Mobile_Manufactured1 =isset($_POST['Mobile_Manufactured']) ? 1 : 0;
+$Other1 =isset($_POST['Other']) ? 1 : 0;
+
+
+
+$Studiomore =isset($_POST['Studio']) ? 1 : 0;
+$anymore =isset($_POST['any']) ? 1 : 0;
+$onemore =isset($_POST['1+']) ? 1 : 0;
+$twomore =isset($_POST['2+']) ? 1 : 0;
+$threemove =isset($_POST['3+']) ? 1 : 0;
+$fourmove =isset($_POST['4+']) ? 1 : 0;
+$fivemore =isset($_POST['5+']) ? 1 : 0;
+
+
+
+$anymore1 =isset($_POST['any1']) ? 1 : 0;
+$oneone =isset($_POST['a1+']) ? 1 : 0;
+$oneandfive =isset($_POST['1.5+']) ? 1 : 0;
+$threemore = isset($_POST['a3+']) ? 1 : 0;
+$fourmoreplus =isset($_POST['a4+']) ? 1 : 0;
+$fivemoreplus =isset($_POST['a5+']) ? 1 : 0;
+
+
+$comment1 = $_POST['comment'];
+
+$username = "java";
+$password = "java";
+
+
+
+
+$db_conn_str =
+            "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)
+                                       (HOST = cedar.humboldt.edu)
+                                       (PORT = 1521))
+                            (CONNECT_DATA = (SID = STUDENT)))";
+
+// let's try to connect and log into Oracle using this
+$conn = oci_connect($username, $password, $db_conn_str);
+
+// exiting if connection/log in failed
+
+$password = NULL; // I won't be using this anymore
+$seller_str = "INSERT INTO SELLEROC(seller_fname, seller_lname, seller_address, seller_email, seller_areacode, 
+                             seller_phone_num, seller_city, seller_price, current_selling_state, seller_House, 
+							 seller_Condo, seller_Townhome,seller_Multi_Family, seller_Land, seller_Mobile_Manufactured, 
+							 seller_Other, seller_Studio, seller_any, seller_1,	seller_2, seller_3, seller_4, seller_5, 
+							 seller_any1, seller_a1, seller_15, seller_a3, seller_a4, seller_a5, Additional_Info)
+							 VALUES(:seller_fname, :seller_lname, :seller_address, :seller_email, :seller_areacode, 
+							 :seller_phone_num, :seller_city, :seller_price, :current_selling_state, 
+							 :seller_House, :seller_Condo, :seller_Townhome, :seller_Multi_Family, :seller_Land,       
+							 :seller_Mobile_Manufactured, :seller_Other, :seller_Studio, :seller_any, :seller_1, :seller_2,
+							 :seller_3, :seller_4, :seller_5, :seller_any1, :seller_a1,
+							 :seller_15, :seller_a3, :seller_a4, :seller_a5, :Additional_Info)"; 
+
+  
+				
+$seller_query_stmt = oci_parse($conn, $seller_str);
+
+oci_bind_by_name($seller_query_stmt, ":seller_fname", $first_name1);
+oci_bind_by_name($seller_query_stmt, ":seller_lname", $last_name1);
+oci_bind_by_name($seller_query_stmt, ":seller_address", $address1);
+oci_bind_by_name($seller_query_stmt, ":seller_email", $email1);
+oci_bind_by_name($seller_query_stmt, ":seller_areacode", $area_code1);
+oci_bind_by_name($seller_query_stmt, ":seller_phone_num", $phone1);
+oci_bind_by_name($seller_query_stmt, ":seller_city", $humboldt1);
+oci_bind_by_name($seller_query_stmt, ":seller_price", $minprice1);
+oci_bind_by_name($seller_query_stmt, ":current_selling_state", $Houses1);
+				
+oci_bind_by_name($seller_query_stmt, ":seller_House", $studio1);
+oci_bind_by_name($seller_query_stmt, ":seller_Condo", $Condo1);
+oci_bind_by_name($seller_query_stmt, ":seller_Townhome", $TownhomeTownhome);
+oci_bind_by_name($seller_query_stmt, ":seller_Multi_Family", $Multi_Family1);
+oci_bind_by_name($seller_query_stmt, ":seller_Land", $Land1);
+oci_bind_by_name($seller_query_stmt, ":seller_Mobile_Manufactured", $Mobile_Manufactured1);
+oci_bind_by_name($seller_query_stmt, ":seller_Other", $Other1);
+				
+oci_bind_by_name($seller_query_stmt, ":seller_Studio", $Studiomore);
+oci_bind_by_name($seller_query_stmt, ":seller_any", $anymore);
+oci_bind_by_name($seller_query_stmt, ":seller_1", $onemore);
+oci_bind_by_name($seller_query_stmt, ":seller_2", $twomore);
+oci_bind_by_name($seller_query_stmt, ":seller_3", $threemove );
+oci_bind_by_name($seller_query_stmt, ":seller_4", $fourmoreplus);
+oci_bind_by_name($seller_query_stmt, ":seller_5", $fivemoreplus);
+
+oci_bind_by_name($seller_query_stmt, ":seller_any1", $anymore1);
+oci_bind_by_name($seller_query_stmt, ":seller_a1", $oneone);
+oci_bind_by_name($seller_query_stmt, ":seller_15", $oneandfive);
+oci_bind_by_name($seller_query_stmt, ":seller_a3", $threemore);
+oci_bind_by_name($seller_query_stmt, ":seller_a4", $fourmoreplus);
+oci_bind_by_name($seller_query_stmt, ":seller_a5", $fivemoreplus);
+oci_bind_by_name($seller_query_stmt, ":Additional_Info", $comment1);
+
+
+oci_execute($seller_query_stmt, OCI_COMMIT_ON_SUCCESS);
+oci_free_statement($seller_query_stmt);
+oci_close($conn);
+
+
+
+?>
+
